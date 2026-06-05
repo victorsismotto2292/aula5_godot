@@ -8647,6 +8647,9 @@ position = Vector2(-353, 209)
 libraries/ = SubResource("AnimationLibrary_ppgk2")
 autoplay = &"move"
 
+[node name="Plataformas2" parent="." unique_id=73508986 instance=ExtResource("1_mx8sn")]
+position = Vector2(1123, 213)
+
 [node name="Player" parent="." unique_id=2100032952 instance=ExtResource("1_2q6dc")]
 z_index = 1
 position = Vector2(551, 290)
@@ -8668,5 +8671,5 @@ tile_map_data = PackedByteArray("AAACABcAAAAHAAcAAAACABgAAAAHAAcAADACABkAAAAHAAc
 tile_set = SubResource("TileSet_mx8sn")
 
 [node name="Decoração e Plataformas" type="TileMapLayer" parent="Node2D" unique_id=1479457188]
-tile_map_data = PackedByteArray("AADDABMAAAAEAAUAAABYAAoAAAAGAAYAAACOABMAAAAEAAMAAABcAAoAAAAGAAYAAABUAAoAAAAGAAYAAADq/xMAAAAEAAQAAAA=")
+tile_map_data = PackedByteArray("AADDABMAAAAEAAUAAACOABMAAAAEAAMAAADq/xMAAAAEAAQAAABUAAcAAAAGAAYAAABYAAcAAAAGAAYAAABcAAcAAAAGAAYAAAA=")
 tile_set = SubResource("TileSet_w8frs")
