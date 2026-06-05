@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cbge1v1wy5e0j"]
 
-[ext_resource type="Texture2D" uid="uid://cj8hibgh7ykoq" path="res://assets/kenney_platformer-art-deluxe/Base pack/Enemies/slimeWalk1.png" id="1_55jtl"]
-[ext_resource type="Texture2D" uid="uid://4vtfeyi8y68s" path="res://assets/kenney_platformer-art-deluxe/Base pack/Enemies/slimeWalk2.png" id="2_mpr68"]
+[ext_resource type="Texture2D" uid="uid://cj8hibgh7ykoq" path="res://assets/kenney_platformer-art-deluxe/Base pack/Enemies/slimeWalk1.png" id="1_md0e3"]
+[ext_resource type="Texture2D" uid="uid://4vtfeyi8y68s" path="res://assets/kenney_platformer-art-deluxe/Base pack/Enemies/slimeWalk2.png" id="2_4ra3w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_55jtl"]
 size = Vector2(42, 27)
@@ -10,10 +10,10 @@ size = Vector2(42, 27)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_55jtl")
+"texture": ExtResource("1_md0e3")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_mpr68")
+"texture": ExtResource("2_4ra3w")
 }],
 "loop": true,
 "name": &"walk",
@@ -30,7 +30,7 @@ shape = SubResource("RectangleShape2D_55jtl")
 sprite_frames = SubResource("SpriteFrames_ft8do")
 animation = &"walk"
 autoplay = "walk"
-frame_progress = 0.36355373
+frame_progress = 0.4668993
 
 [node name="FloorLeft" type="RayCast2D" parent="." unique_id=1652199030]
 position = Vector2(0, 5)
