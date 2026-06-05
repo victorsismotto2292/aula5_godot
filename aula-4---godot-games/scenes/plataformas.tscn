@@ -3,12 +3,12 @@
 [ext_resource type="Texture2D" uid="uid://jvt6vkok8uqm" path="res://assets/kenney_platformer-art-deluxe/Base pack/Tiles/stoneHalf.png" id="1_nu1ei"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gnxh6"]
-size = Vector2(360, 28)
+size = Vector2(360, 23)
 
 [node name="Plataformas" type="AnimatableBody2D" unique_id=647445267]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=380450025]
-position = Vector2(297, 69)
+position = Vector2(297, 71.5)
 shape = SubResource("RectangleShape2D_gnxh6")
 
 [node name="Plataforma" type="Node2D" parent="." unique_id=1785686029]
