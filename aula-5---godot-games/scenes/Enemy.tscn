@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://cbge1v1wy5e0j"]
+
+[ext_resource type="Texture2D" uid="uid://cj8hibgh7ykoq" path="res://assets/kenney_platformer-art-deluxe/Base pack/Enemies/slimeWalk1.png" id="1_55jtl"]
+[ext_resource type="Texture2D" uid="uid://4vtfeyi8y68s" path="res://assets/kenney_platformer-art-deluxe/Base pack/Enemies/slimeWalk2.png" id="2_mpr68"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ft8do"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_55jtl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_mpr68")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 6.0
+}]
+
+[node name="Enemy" type="CharacterBody2D" unique_id=710103126]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=187347255]
+sprite_frames = SubResource("SpriteFrames_ft8do")
+animation = &"walk"
+autoplay = "walk"
+frame_progress = 0.25064173
