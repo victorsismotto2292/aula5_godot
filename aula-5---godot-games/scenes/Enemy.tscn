@@ -3,6 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://cj8hibgh7ykoq" path="res://assets/kenney_platformer-art-deluxe/Base pack/Enemies/slimeWalk1.png" id="1_55jtl"]
 [ext_resource type="Texture2D" uid="uid://4vtfeyi8y68s" path="res://assets/kenney_platformer-art-deluxe/Base pack/Enemies/slimeWalk2.png" id="2_mpr68"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_55jtl"]
+size = Vector2(42, 27)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_ft8do"]
 animations = [{
 "frames": [{
@@ -19,8 +22,20 @@ animations = [{
 
 [node name="Enemy" type="CharacterBody2D" unique_id=710103126]
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1692651675]
+position = Vector2(-5, 0.5)
+shape = SubResource("RectangleShape2D_55jtl")
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=187347255]
 sprite_frames = SubResource("SpriteFrames_ft8do")
 animation = &"walk"
 autoplay = "walk"
-frame_progress = 0.25064173
+frame_progress = 0.36355373
+
+[node name="FloorLeft" type="RayCast2D" parent="." unique_id=1652199030]
+position = Vector2(0, 5)
+target_position = Vector2(-20, 10)
+
+[node name="FloorRight" type="RayCast2D" parent="." unique_id=237379916]
+position = Vector2(0, 5)
+target_position = Vector2(20, 10)
