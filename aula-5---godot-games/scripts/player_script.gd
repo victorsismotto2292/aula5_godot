@@ -33,10 +33,11 @@ func _ready() -> void: # FUNÇÃO INICIAL DO JOGO, INICIA E REINICIA
 	
 func die():
 	print("O personagem morreu!")
-	# Desativar colisão para evitar múltiplas chamadas
+	# Desativar colisão e processamento para evitar múltiplas chamadas
 	set_physics_process(false)
-	# Pequeno atraso antes de recarregar a cena (opcional, mas bom para o jogador ver a morte)
-	get_tree().reload_current_scene()	
+	# Usar um Timer via código para esperar 0.5 segundos antes de reiniciar
+	await get_tree().create_timer(0.5).timeout
+	get_tree().reload_current_scene()
  # TÉRMINO CÓDIGO NOVO
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
