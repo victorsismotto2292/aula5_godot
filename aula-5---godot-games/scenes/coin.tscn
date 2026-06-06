@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://c6u7x8j4y2r1"]
+[gd_scene load_steps=5 format=3 uid="uid://c6u7x8j4y2r1"]
 
 [ext_resource type="Script" path="res://scripts/coin.gd" id="1_coin"]
 [ext_resource type="Texture2D" uid="uid://cj8hibgh7ykoq" path="res://assets/kenney_platformer-art-deluxe/Base pack/Items/coinGold.png" id="2_coin_tex"]
@@ -6,9 +6,18 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_coin"]
 radius = 35.0
 
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_coin"]
+direction = Vector3(0, -1, 0)
+spread = 45.0
+initial_velocity_min = 80.0
+initial_velocity_max = 150.0
+scale_min = 2.0
+scale_max = 4.0
+color = Color(1, 0.843137, 0, 1)
+
 [node name="Coin" type="Area2D"]
 collision_layer = 4
-collision_mask = 2
+collision_mask = 1
 script = ExtResource("1_coin")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -21,5 +30,7 @@ shape = SubResource("CircleShape2D_coin")
 [node name="Particles" type="GPUParticles2D" parent="."]
 emitting = false
 amount = 8
+lifetime = 0.4
 one_shot = true
 explosiveness = 1.0
+process_material = SubResource("ParticleProcessMaterial_coin")

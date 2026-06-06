@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://yrk2bh2kcpbk" path="res://scripts/level.gd" id="1_level_script"]
 [ext_resource type="PackedScene" uid="uid://3eh6vdkjqbl6" path="res://scenes/plataformas.tscn" id="1_mx8sn"]
 [ext_resource type="PackedScene" uid="uid://cbge1v1wy5e0j" path="res://scenes/enemy.tscn" id="1_ppgk2"]
+[ext_resource type="PackedScene" uid="uid://c6u7x8j4y2r1" path="res://scenes/coin.tscn" id="3_coin"]
 [ext_resource type="PackedScene" uid="uid://b8u7x8j4y2r1" path="res://scenes/hud.tscn" id="2_hud_scene"]
 [ext_resource type="Texture2D" uid="uid://bsagan4qjtgod" path="res://assets/kenney_platformer-art-deluxe/Base pack/Tiles/tiles_spritesheet.png" id="2_w7c3h"]
 
@@ -8683,3 +8684,12 @@ shape = SubResource("RectangleShape2D_w7c3h")
 [node name="Enemy" parent="." unique_id=710103126 instance=ExtResource("1_ppgk2")]
 position = Vector2(1435, 261)
 up_direction = Vector2(1, 0)
+
+[node name="Coin" parent="." unique_id=100000001 instance=ExtResource("3_coin")]
+position = Vector2(700, 340)
+
+[node name="Coin2" parent="." unique_id=100000002 instance=ExtResource("3_coin")]
+position = Vector2(820, 340)
+
+[node name="Coin3" parent="." unique_id=100000003 instance=ExtResource("3_coin")]
+position = Vector2(940, 340)
