@@ -1,5 +1,7 @@
-[gd_scene format=4 uid="uid://dkdgds4wtmfcv"]
+[gd_scene load_steps=10 format=3 uid="uid://dkdgds4wtmfcv"]
 
+[ext_resource type="Script" path="res://scripts/level.gd" id="1_level_script"]
+[ext_resource type="PackedScene" uid="uid://b8u7x8j4y2r1" path="res://scenes/hud.tscn" id="2_hud_scene"]
 [ext_resource type="PackedScene" uid="uid://cn44rgqoywuwf" path="res://scenes/player.tscn" id="1_2q6dc"]
 [ext_resource type="PackedScene" uid="uid://3eh6vdkjqbl6" path="res://scenes/plataformas.tscn" id="1_mx8sn"]
 [ext_resource type="PackedScene" uid="uid://cbge1v1wy5e0j" path="res://scenes/enemy.tscn" id="1_ppgk2"]
@@ -8643,8 +8645,6 @@ size = Vector2(97, 111)
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_2r41h"]
 distance = -77.0
 
-[ext_resource type="Script" path="res://scripts/level.gd" id="1_level_script"]
-[ext_resource type="PackedScene" uid="uid://b8u7x8j4y2r1" path="res://scenes/hud.tscn" id="2_hud_scene"]
 
 [node name="level1" type="Node2D" unique_id=1634294162]
 script = ExtResource("1_level_script")
