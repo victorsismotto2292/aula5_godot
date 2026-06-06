@@ -1,12 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://dkdgds4wtmfcv"]
+[gd_scene format=4 uid="uid://dkdgds4wtmfcv"]
 
-[ext_resource type="Script" path="res://scripts/level.gd" id="1_level_script"]
-[ext_resource type="PackedScene" uid="uid://b8u7x8j4y2r1" path="res://scenes/hud.tscn" id="2_hud_scene"]
 [ext_resource type="PackedScene" uid="uid://cn44rgqoywuwf" path="res://scenes/player.tscn" id="1_2q6dc"]
+[ext_resource type="Script" uid="uid://yrk2bh2kcpbk" path="res://scripts/level.gd" id="1_level_script"]
 [ext_resource type="PackedScene" uid="uid://3eh6vdkjqbl6" path="res://scenes/plataformas.tscn" id="1_mx8sn"]
 [ext_resource type="PackedScene" uid="uid://cbge1v1wy5e0j" path="res://scenes/enemy.tscn" id="1_ppgk2"]
+[ext_resource type="PackedScene" uid="uid://b8u7x8j4y2r1" path="res://scenes/hud.tscn" id="2_hud_scene"]
 [ext_resource type="Texture2D" uid="uid://bsagan4qjtgod" path="res://assets/kenney_platformer-art-deluxe/Base pack/Tiles/tiles_spritesheet.png" id="2_w7c3h"]
-[ext_resource type="PackedScene" uid="uid://c3u43fnbf2jw8" path="res://scenes/killzone.tscn" id="5_ppgk2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mx8sn"]
 texture = ExtResource("2_w7c3h")
@@ -8642,15 +8641,10 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w7c3h"]
 size = Vector2(97, 111)
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_2r41h"]
-distance = -77.0
-
-
 [node name="level1" type="Node2D" unique_id=1634294162]
 script = ExtResource("1_level_script")
 
-[node name="HUD" parent="." instance=ExtResource("2_hud_scene")]
-
+[node name="HUD" parent="." unique_id=419225650 instance=ExtResource("2_hud_scene")]
 
 [node name="Tilemap" type="Node2D" parent="." unique_id=262308208]
 
@@ -8689,5 +8683,3 @@ shape = SubResource("RectangleShape2D_w7c3h")
 [node name="Enemy" parent="." unique_id=710103126 instance=ExtResource("1_ppgk2")]
 position = Vector2(1435, 261)
 up_direction = Vector2(1, 0)
-
-# Killzone global removida para evitar blackout loop. Adicione killzones manualmente onde necessário.

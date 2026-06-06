@@ -36,14 +36,14 @@ shape = SubResource("RectangleShape2D_55jtl")
 sprite_frames = SubResource("SpriteFrames_ft8do")
 animation = &"walk"
 autoplay = "walk"
-frame_progress = 0.32414898
+frame_progress = 0.79923916
 
 [node name="FloorLeft" type="RayCast2D" parent="." unique_id=1652199030]
-position = Vector2(0, 5)
+position = Vector2(0, 7)
 target_position = Vector2(-20, 10)
 
 [node name="FloorRight" type="RayCast2D" parent="." unique_id=237379916]
-position = Vector2(0, 5)
+position = Vector2(0, 7)
 target_position = Vector2(20, 10)
 
 [node name="Killzone" parent="." unique_id=1792636448 instance=ExtResource("4_5uy6h")]
