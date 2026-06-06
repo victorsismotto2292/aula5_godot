@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://c6u7x8j4y2r1"]
+
+[ext_resource type="Script" path="res://scripts/coin.gd" id="1_coin"]
+[ext_resource type="Texture2D" uid="uid://cj8hibgh7ykoq" path="res://assets/kenney_platformer-art-deluxe/Base pack/Items/coinGold.png" id="2_coin_tex"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_coin"]
+radius = 35.0
+
+[node name="Coin" type="Area2D"]
+collision_layer = 4
+collision_mask = 2
+script = ExtResource("1_coin")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_coin_tex")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_coin")
+
+[node name="Particles" type="GPUParticles2D" parent="."]
+emitting = false
+amount = 8
+one_shot = true
+explosiveness = 1.0

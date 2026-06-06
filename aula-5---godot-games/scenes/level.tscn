@@ -8643,7 +8643,14 @@ size = Vector2(97, 111)
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_2r41h"]
 distance = -77.0
 
+[ext_resource type="Script" path="res://scripts/level.gd" id="1_level_script"]
+[ext_resource type="PackedScene" uid="uid://b8u7x8j4y2r1" path="res://scenes/hud.tscn" id="2_hud_scene"]
+
 [node name="level1" type="Node2D" unique_id=1634294162]
+script = ExtResource("1_level_script")
+
+[node name="HUD" parent="." instance=ExtResource("2_hud_scene")]
+
 
 [node name="Tilemap" type="Node2D" parent="." unique_id=262308208]
 
