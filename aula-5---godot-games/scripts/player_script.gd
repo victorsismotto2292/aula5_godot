@@ -31,6 +31,8 @@ func _ready() -> void: # FUNÇÃO INICIAL DO JOGO, INICIA E REINICIA
 	# CONCATENANDO A VARIÁVEL:
 	print("Vidas: " + str(vidas)) # EXIBINDO NO CONSOLE
 	
+func die():
+	get_tree().call_deferred("reload_current_scene")	
  # TÉRMINO CÓDIGO NOVO
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -63,5 +65,6 @@ func _physics_process(delta: float) -> void:
 		animated_sprite_2d.flip_h = false
 	elif direction < 0:
 		animated_sprite_2d.flip_h = true
+		
 			
 	move_and_slide()
