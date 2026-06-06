@@ -8642,8 +8642,7 @@ sources/0 = SubResource("TileSetAtlasSource_w7c3h")
 [node name="level1" type="Node2D" unique_id=1634294162]
 
 [node name="Enemy" parent="." unique_id=710103126 instance=ExtResource("1_ppgk2")]
-z_index = 1
-position = Vector2(1435, 263)
+position = Vector2(1435, 261)
 up_direction = Vector2(1, 0)
 
 [node name="Plataformas" parent="." unique_id=647445267 instance=ExtResource("1_mx8sn")]
