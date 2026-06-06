@@ -8690,8 +8690,4 @@ shape = SubResource("RectangleShape2D_w7c3h")
 position = Vector2(1435, 261)
 up_direction = Vector2(1, 0)
 
-[node name="Killzone" parent="." unique_id=1792636448 instance=ExtResource("5_ppgk2")]
-position = Vector2(1430, 219)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone" unique_id=570368588]
-shape = SubResource("WorldBoundaryShape2D_2r41h")
+# Killzone global removida para evitar blackout loop. Adicione killzones manualmente onde necessário.
