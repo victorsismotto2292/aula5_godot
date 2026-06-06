@@ -32,7 +32,11 @@ func _ready() -> void: # FUNÇÃO INICIAL DO JOGO, INICIA E REINICIA
 	print("Vidas: " + str(vidas)) # EXIBINDO NO CONSOLE
 	
 func die():
-	get_tree().call_deferred("reload_current_scene")	
+	print("O personagem morreu!")
+	# Desativar colisão para evitar múltiplas chamadas
+	set_physics_process(false)
+	# Pequeno atraso antes de recarregar a cena (opcional, mas bom para o jogador ver a morte)
+	get_tree().reload_current_scene()	
  # TÉRMINO CÓDIGO NOVO
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
